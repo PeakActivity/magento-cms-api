@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<config>
+  <api>
+    <resources>
+      <customapi translate="title" module="customapi">
+        <title>CMS Page and Block</title>
+        <acl>customapi</acl>
+        <model>customapi/api</model>
+        <methods>
+          <pagelist translate="title" module="customapi">
+            <title>Retrieve CMS Page List</title>
+            <acl>customapi/page</acl>
+            <method>pages</method>
+          </pagelist>
+          <pagecontent translate="title" module="customapi">
+            <title>Retrieve CMS Page Content</title>
+            <acl>customapi/page</acl>
+            <method>page</method>
+          </pagecontent>
+          <blocklist translate="title" module="customapi">
+            <title>Retrieve CMS Block List</title>
+            <acl>customapi/block</acl>
+            <method>blocks</method>
+          </blocklist>
+          <blockcontent translate="title" module="customapi">
+            <title>Retrieve CMS Block Content</title>
+            <acl>customapi/block</acl>
+            <method>block</method>
+          </blockcontent>
+        </methods>
+        <faults module="customapi">
+          <data_invalid>
+            <code>200</code>
+            <message>Invalid CMS data. Details in error message.</message>
+          </data_invalid>
+          <not_exists>
+            <code>102</code>
+            <message>CMS page doesn't exist.</message>
+          </not_exists>
+        </faults>
+      </customapi>
+    </resources>
+    <acl>
+      <resources>
+        <customapi translate="title" module="customapi">
+          <title>CMS</title>
+          <sort_order>2000</sort_order>
+          <page translate="title" module="customapi">
+            <title>CMS Pages</title>
+          </page>
+          <block translate="title" module="customapi">
+            <title>CMS Static Block</title>
+          </block>
+        </customapi>
+      </resources>
+    </acl>
+  </api>
+</config>

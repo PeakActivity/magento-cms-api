@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <KS_Customapi>
+      <version>0.1.0</version>
+    </KS_Customapi>
+  </modules>
+  <frontend>
+   <routers>
+     <customapi>
+       <use>standard</use>
+       <args>
+         <module>KS_Customapi</module>
+         <frontName>cmsapi</frontName>
+       </args>
+     </customapi>
+   </routers>
+  </frontend>
+  <global>
+    <helpers>
+      <customapi>
+        <class>KS_Customapi_Helper</class>
+      </customapi>
+    </helpers>
+	<models>
+	  <customapi>
+		<class>KS_Customapi_Model</class>
+		<resourceModel>customapi_mysql4</resourceModel>
+	  </customapi>
+	</models>
+  </global>
+</config> 
