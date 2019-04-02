@@ -2,28 +2,7 @@
 
 Custom API to retrieve CMS data page or block from your magento installation with two methods:
 
-* JSON API (Based on standard: jsonapi.org)
 * SOAP API (Based on standard: soapui.org)
-
----
-
-### JSON API
-
-JSON API is public method to retrieve data without authentication API key or username, 
-you can directly access it from browser to see how it works, example:
-
-* Get CMS Page Lists: http://mage.fauzie.my.id/cmsapi/page/list/
-* Get CMS Page by ID: http://mage.fauzie.my.id/cmsapi/page/get/10/
-* Get CMS Block Lists: http://mage.fauzie.my.id/cmsapi/block/list/
-* Get CMS Block by ID: http://mage.fauzie.my.id/cmsapi/block/get/19/
-
-On the list page, also have sort and order query like:
-/cmsapi/page/list/sortby/&lt;column_name&gt;/&lt;ASC|DESC&gt;
-
-* Allowed column name for page: 'id', 'title', 'created', 'updated', 'sort'
-* Allowed column name for block: 'id', 'title', 'created', 'updated'
-
-Example: /cmsapi/page/list/sortby/updated/DESC/
 
 ---
 
